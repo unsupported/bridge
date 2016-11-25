@@ -32,7 +32,7 @@ def get_files file_path # Iterates through a one-column CSV file.
       puts 'No data in course_id'.red
       raise 'Valid CSV headers not found (no data in course_id)'
     else
-      $course_id = row['course_id'].to_i
+      @course_id = row['course_id'].to_i
       'Course published'.green
     end
     token = @token
@@ -48,11 +48,11 @@ end
 
 def acquire_lock # Retrieves the Lock ID needed to publish course. This is passed in the Publish request's headers
   request = Typhoeus.post(
-  "#{@url}/api/author/course_templates/#{$course_id}/lock?as_user_id=#{@admin_id}",
-  headers: { authorization: "Basic #{@token}", 'Content-Type' => 'application/json', 'Accept' => 'application/json' },
+  "#{@url}/api/author/course_templates/#{@course_id}/lock?as_user_id=#{@admin_id}",
+  headers: { authorization: "Basic #{@token}", 'Content-Type': 'application/json', 'Accept': 'application/json' },
   )
   unless request.headers['status'] != "404 Not Found"
-    raise "Invalid course id (#{$course_id}); ensure this course exists"
+    raise "Invalid course id (#{@course_id}); ensure this course exists"
   end
   x = JSON.parse(request.body)
   @lock_id = x['lock']['id']
@@ -61,16 +61,16 @@ end
 
 def publish_bridge_course # API call to publish the course
   request = Typhoeus.post(
-    "#{@url}/api/author/course_templates/#{$course_id}/publish?as_user_id=#{@admin_id}",
-    headers: { authorization: "Basic #{@token}", 'X-Lock-Id' => "#{@lock_id}" },
+    "#{@url}/api/author/course_templates/#{@course_id}/publish?as_user_id=#{@admin_id}",
+    headers: { authorization: "Basic #{@token}", 'X-Lock-Id': "#{@lock_id}" },
     body: {
-        id: $course_id
+        id: @course_id
     }
   )
   if request.code == 200
-    puts "Course " + $course_id.to_s + " published".green
+    puts "Course " + @course_id.to_s + " published".green
   else
-    puts "Course " + $course_id.to_s + " failure".red
+    puts "Course " + @course_id.to_s + " failure".red
   end
   data = JSON.parse(request.body)
 end
