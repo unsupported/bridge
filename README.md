@@ -1,3 +1,5 @@
+![alt tag](http://url/to/img.png)
+
 # Bridge
 Bridge is the new LMS geared towards the corporate space. For additional information,
 visit [https://www.getbridge.com/](https://www.getbridge.com/)
