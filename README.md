@@ -1,4 +1,4 @@
-![alt tag](http://url/to/img.png)
+![alt tag](https://financesonline.com/uploads/2015/10/bridgeth.jpeg)
 
 # Bridge
 Bridge is the new LMS geared towards the corporate space. For additional information,
