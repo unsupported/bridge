@@ -1,7 +1,7 @@
 ![alt tag](https://financesonline.com/uploads/2015/10/bridgeth.jpeg)
 
 # Bridge
-Bridge is the new LMS geared towards the corporate space. For additional information,
+Bridge is a new LMS geared towards the corporate space. For additional information,
 visit [https://www.getbridge.com/](https://www.getbridge.com/)
 
 # Important Notes
