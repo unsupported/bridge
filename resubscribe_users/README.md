@@ -15,7 +15,6 @@ uid
 email@sampleemail.com
 email2@sampleemail2.com
 
-
 Use cases:
 
 - Reverse the unsubscribe script

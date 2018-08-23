@@ -8,6 +8,13 @@ The unsubscribe user script is used to update a CSV list of users in order to pr
 
 The unsubscribe script requires a Bridge API token to be generated with Account Admin set as the role.
 
+A CSV file with 'uid' as the header for a single column containing the UID for the users you'd like to subscribe to notifications in Bridge, for example:
+uid
+123456
+123457
+email@sampleemail.com
+email2@sampleemail2.com
+
 Use cases:
 
 - Perform notifications can only be turned off by unsubscribing the user, this script will accomplish that.
