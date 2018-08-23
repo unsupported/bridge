@@ -2,7 +2,7 @@
 
 # Subscribe Users
 
-The subscribe user script is used to update a CSV list of users in order to allow them to receive Bridge notifications. It will counteract the [Unsubscribe script] (https://github.com/unsupported/bridge/tree/master/unsubscribe_users)
+The subscribe user script is used to update a CSV list of users in order to allow them to receive Bridge notifications. It will counteract the [Unsubscribe script](https://github.com/unsupported/bridge/tree/master/unsubscribe_users)
 
 # Requirements and usage
 
