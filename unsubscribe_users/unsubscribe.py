@@ -14,11 +14,6 @@ filepath = input("Enter the CSV file path: ")
 # do not edit below this comment unless you really know
 # Python3 and want to modify the script at your own risk
 
-# CSV sample:
-# uid
-# 12345
-# 12346
-
 base_url = 'https://{0}.bridgeapp.com/api/author'.format(subdomain)
 headers = {'Authorization':token,'Content-Type':'application/json'}
 
